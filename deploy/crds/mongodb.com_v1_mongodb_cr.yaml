@@ -19,3 +19,10 @@ spec:
           db: admin
         - name: userAdminAnyDatabase
           db: admin
+    - name: testuser1
+      db: test
+      passwordSecretRef:
+        name: mongo-db-testuser1-secret
+      roles:
+        - name: readWrite
+          db: test
