@@ -1,7 +1,7 @@
 apiVersion: mongodb.com/v1
 kind: MongoDB
 metadata:
-  name: example-scram-mongodb
+  name: mongodb
 spec:
   members: 3
   type: ReplicaSet
@@ -10,7 +10,7 @@ spec:
     authentication:
       modes: ["SCRAM"]
   users:
-    - name: mongo
+    - name: mongoadmin
       db: admin
       passwordSecretRef:
         name: mongo-db-user-secret
